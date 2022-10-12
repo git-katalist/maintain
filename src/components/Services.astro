@@ -65,12 +65,19 @@
       line-height: calc(1.6rem * 1.65);
     }
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     #services {
-      max-width: 1440px;
+      // height: 50vh; // Double check the height as you want it
+      max-width: 1200px;
+      margin: 0 auto;
       grid-template-columns: repeat(3, 1fr);
-      margin: 172px auto;
-      column-gap: 8rem;
+      // margin: 172px auto;
+      column-gap: 5rem;
+      // align-items: center;
+
+      > .card {
+        height: 100%;
+      }
     }
   }
 </style>

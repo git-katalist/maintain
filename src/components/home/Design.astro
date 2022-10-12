@@ -27,9 +27,11 @@ import corporateBrandingIcon from "../../images/corporate_branding_icon.svg";
   <div class="container definition_container">
     <div class="title">Discovery</div>
     <div class="text">
-      We start our projects by understanding the scope and requirements. This is
-      accomplished by working closely with you to make sure we are all on the
-      same page.
+      <p>
+        We start our projects by understanding the scope and requirements. This
+        is accomplished by working closely with you to make sure we are all on
+        the same page.
+      </p>
     </div>
   </div>
 
@@ -80,153 +82,93 @@ import corporateBrandingIcon from "../../images/corporate_branding_icon.svg";
 </section>
 
 <style lang="scss">
-  //   .container {
-  //     max-width: 1280px;
-  //     margin: 2rem auto;
-  //     display: grid;
-  //     grid-template-columns: 1fr;
-  //     gap: 4rem;
-
-  //     .title {
-  //       font-size: 4rem;
-  //     }
-  //   }
-
-  //   @media screen and (min-width: 600px) {
-  //     .container {
-  //       max-width: 1280px;
-  //       margin: 2rem auto;
-  //       grid-template-columns: 3fr 9fr;
-  //       gap: 4rem;
-  //     }
-
-  //     .content {
-  //       display: grid;
-  //       //   justify-content: space-evenly;
-  //       grid-template-rows: auto 1fr;
-
-  //       p {
-  //         display: flex;
-  //         align-items: center;
-  //       }
-  //     }
-  //   }
-
   .intro_container {
-    display: grid;
-    column-gap: 13.2rem;
-    grid-template-columns: 1fr;
-
-    .identity_design_image {
+    > .icon {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      img {
-        width: 50%;
+      > img {
+        width: 320px;
       }
     }
-
-    .title {
-      margin-top: 10rem;
+    > h4.title {
       font-size: 3.2rem;
-      font-weight: 400;
-    }
-
-    p {
-      font-size: 1.8rem;
-      line-height: 28.8px;
-    }
-  }
-
-  @media screen and (min-width: 1011px) {
-    .intro_container {
-      max-width: 1440px;
-      margin: 2rem auto;
-      display: grid;
-      column-gap: 13.2rem;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-areas:
-        "image title"
-        "image paragraph";
-
-      .identity_design_image {
-        grid-area: image;
-        grid-column: 1/4;
-
-        img {
-          width: 100%;
-        }
-      }
-
-      p {
-        grid-area: paragraph;
-        grid-column: 4/12;
-        grid-row: 1;
-        margin-top: calc(3.2rem + 3.6rem);
-      }
-
-      .title {
-        grid-area: title;
-        grid-column: 4/12;
-        margin-top: 0;
-      }
+      margin-top: 10rem;
+      margin-bottom: 3rem;
     }
   }
 
   .definition_container {
-    max-width: 954px;
-    margin: 172px auto;
-
-    .title {
+    margin-top: 10rem;
+    > .title {
       font-size: 3.2rem;
-      font-weight: 400;
-      margin-bottom: 19.2px;
+      margin-bottom: 1.5rem;
+      //   margin-top: 10rem;
+      //   margin-bottom: 6rem;
     }
+  }
 
-    .text {
-      font-size: 1.8rem;
-      line-height: 28.8px;
-      font-weight: 400;
+  @media screen and (min-width: 768px) {
+    .intro_container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      column-gap: 3rem;
+      grid-template-areas:
+        "image image image . title title title title title title title title"
+        "image image image . paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph";
+      grid-template-rows: auto 1fr;
+
+      > .icon {
+        grid-area: image;
+      }
+      > h4.title {
+        grid-area: title;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      > p {
+        grid-area: paragraph;
+        align-self: end;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .definition_container {
+      max-width: 1200px;
+      margin: 10rem auto;
     }
   }
 
   .services_container {
-    display: grid;
-    gap: 10rem;
-    .Card_heading {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-
-      .Card_title {
+    .Card {
+      margin-top: 5rem;
+      &_heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      &_title {
         font-size: 1.8rem;
-        line-height: 28.8px;
-        font-weight: 400;
       }
-
-      .Card_icon {
+      &_icon {
         margin-right: 1rem;
-        img {
-          width: 24px;
-          fill: white;
-          color: white;
-        }
       }
     }
-    .Card_text {
-      font-size: 1.8rem;
-      line-height: 28.8px;
-    }
-  }
 
-  @media screen and (min-width: 600px) {
-    .services_container {
-      max-width: 1214px;
-      margin: 172px auto;
-      gap: 72px;
+    @media screen and (min-width: 768px) {
+      max-width: 1200px;
+      margin: 10rem auto;
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
+      column-gap: 13rem;
+      row-gap: 7rem;
+
+      .Card {
+        margin-top: 0rem;
+      }
     }
   }
 </style>
