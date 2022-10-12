@@ -1,0 +1,88 @@
+---
+import image from "../images/Frame@1x.png";
+---
+
+<section class="showcase">
+  <div class="container showcase_container">
+    <div class="showcase_text">
+      <div class="heading">VISUAL COMMUNICATIONS STUDIO</div>
+      <div class="teaser">
+        Helping SMALL and MEDIUM Enterprises tell their stories visually to the
+        world, by designing and developing Identity Strategies and web platforms
+      </div>
+    </div>
+    <div class="showcase_image">
+      <img src={image} alt="showcase image" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .showcase {
+    background: rgb(15, 15, 15);
+    background: linear-gradient(
+      222deg,
+      rgba(15, 15, 15, 1) 0%,
+      rgba(56, 56, 89, 1) 45%,
+      rgba(61, 61, 64, 0.9808298319327731) 100%
+    );
+  }
+  .showcase_container {
+    max-width: calc(1440px - (2 * 140px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1.5rem 3rem;
+
+    .showcase_text {
+      .heading {
+        font-size: 4rem;
+        text-align: center;
+        color: #ebe7e7;
+        margin-bottom: 3rem;
+        padding-top: 6rem;
+      }
+      .teaser {
+        font-size: 1.8rem;
+        margin-top: 10rem;
+        line-height: calc(1.8rem * 1.65);
+        color: #bfb9b9;
+      }
+    }
+
+    .showcase_image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 7rem;
+      img {
+        width: 80%;
+        max-width: 250px;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      grid-template-columns: 7fr 5fr;
+      height: 740px;
+      align-content: center;
+
+      .showcase_text {
+        .heading {
+          font-size: 4.5rem;
+          font-weight: 700;
+          text-align: left;
+        }
+      }
+      .showcase_image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 7rem;
+        img {
+          width: 80%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,76 @@
+---
+---
+
+<section id="identity" class="identity">
+  <div id="services">
+    <div class="card">
+      <div class="heading card_heading">
+        <span class="icon card_icon"></span>
+        <h4 class="title card_title">web development</h4>
+      </div>
+      <div class="content card_content">
+        <p>
+          We pride ourselves on delivering superior web design and internet
+          marketing solutions. Our value is unequaled and we have an unsurpassed
+          commitment to outstanding customer service.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="heading card_heading">
+        <span class="icon card_icon"></span>
+        <h4 class="title card_title">web design</h4>
+      </div>
+      <div class="content card_content">
+        <p>
+          We pride ourselves on delivering superior web design and internet
+          marketing solutions. Our value is unequaled and we have an unsurpassed
+          commitment to outstanding customer service.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="heading card_heading">
+        <span class="icon card_icon"></span>
+        <h4 class="title card_title">identity design</h4>
+      </div>
+      <div class="content card_content">
+        <p>
+          We pride ourselves on delivering superior web design and internet
+          marketing solutions. Our value is unequaled and we have an unsurpassed
+          commitment to outstanding customer service.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  #services {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10rem 0;
+    row-gap: 6rem;
+
+    .card_title {
+      font-size: 3.2rem;
+      font-weight: 400;
+      margin-bottom: 19.2px;
+    }
+
+    .card_content p {
+      font-size: 1.6rem;
+      line-height: calc(1.6rem * 1.65);
+    }
+  }
+  @media screen and (min-width: 600px) {
+    #services {
+      max-width: 1440px;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 172px auto;
+      column-gap: 8rem;
+    }
+  }
+</style>

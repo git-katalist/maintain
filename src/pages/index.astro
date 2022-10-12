@@ -1,0 +1,38 @@
+---
+import Layout from "../Layouts/Main.astro";
+import "../../styles/global.scss";
+import Identity from "../components/home/Identity.astro";
+import Showcase from "../components/Showcase.astro";
+import Services from "../components/Services.astro";
+import Design from "../components/home/Design.astro";
+import Development from "../components/home/Development.astro";
+---
+
+<Layout title="Katalist | Home" page_name="index-page">
+  <Showcase />
+  <div class="about">
+    <div class="container">
+      <div class="title">about katalist</div>
+      <p>
+        We are marketing professionals, designers, developers, project managers,
+        and dedicated to creative Digital communications and results-driven web
+        solutions using the latest web technology. Our web design services can
+        help rediscover your business’s image in the Internet marketplace.
+      </p>
+    </div>
+  </div>
+
+  <Services />
+  <Identity />
+  <Design />
+  <Development />
+</Layout>
+
+<!-- <style>
+  [iconify-icon]icon {
+    width: 4rem;
+    height: 4rem;
+  }
+</style> -->
+<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"
+></script>

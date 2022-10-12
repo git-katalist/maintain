@@ -1,0 +1,272 @@
+---
+import image from "../../images/identity_design_image.svg";
+import logoIcon from "../../images/logo_icon.svg";
+import marketingIcon from "../../images/marketing_icon.svg";
+import personalBrandingIcon from "../../images/personal_branding_icon.svg";
+import corporateBrandingIcon from "../../images/corporate_branding_icon.svg";
+---
+
+<section id="identity" class="identity">
+  <div class="container intro_container">
+    <div class="icon identity_design_image">
+      <img src={image} alt="" />
+    </div>
+
+    <h4 class="title identity_design_title">Identity Design</h4>
+
+    <p>
+      Brand strategy is a long-term plan for the development of a successful
+      brand. We develop strategies that assist your idea, business and or
+      corporation evoke emotions, affinity with your target audience.
+      <br /><br />
+      Identity Design solutions Branding Strategies that are expertly crafted to
+      surpass your expectations. Your Identity is the most important aspect of youridea
+      /business that make you visible to your target audience and we carve yours
+      to endure the test of time....
+    </p>
+  </div>
+
+  <div class="container definition_container">
+    <div class="title">definition</div>
+    <div class="text">
+      Define how you want to be perceived: When your customers have finished
+      using your product or service, how do you want them to describe their
+      experience? See your brand as your promise to your customers – a promise
+      that’s different from your competitors.
+    </div>
+  </div>
+
+  <div class="container services_container">
+    <div class="Card logo_card">
+      <div class="Card_heading">
+        <div class="Card_icon">
+          <img src={logoIcon} alt="" />
+        </div>
+        <div class="Card_title">
+          <h4>Logo Design</h4>
+        </div>
+      </div>
+      <div class="Card_text">
+        <p>
+          Logos are symbols made up of text and images that help identify brands
+          we like. But they can be so much more!
+          <br /><br />
+          The logo we design are unique, memorable and communicate your business
+          idea, vision, and personality in the most effective manner within the shortest
+          amount of time.
+        </p>
+      </div>
+    </div>
+
+    <div class="Card marketing_card">
+      <div class="Card_heading">
+        <div class="Card_icon">
+          <img src={marketingIcon} alt="" />
+        </div>
+        <div class="Card_title">
+          <h4>Marketing Assets</h4>
+        </div>
+      </div>
+      <div class="Card_text">
+        <p>
+          Marketing assets are a collection of media, content as well as
+          information that is compiled to support marketing and sales
+          activities. A few common types of marketing assets but not limited to.
+        </p>
+      </div>
+    </div>
+
+    <div class="Card personal_branding_card">
+      <div class="Card_heading">
+        <div class="Card_icon">
+          <img src={personalBrandingIcon} alt="" />
+        </div>
+        <div class="Card_title">
+          <h4>Personal Branding</h4>
+        </div>
+      </div>
+      <div class="Card_text">
+        <p>
+          We work to promote you by highlighting your skills, personality and
+          tell your story using unspoken language, words
+          <br /><br />
+          We work to differentiate you from other people, portray an image that people
+          should see of you while being memorable.
+        </p>
+      </div>
+    </div>
+
+    <div class="Card corporate_brading_card">
+      <div class="Card_heading">
+        <div class="Card_icon">
+          <img src={corporateBrandingIcon} alt="" />
+        </div>
+        <div class="Card_title">
+          <h4>Corporate Branding</h4>
+        </div>
+      </div>
+      <div class="Card_text">
+        <p>
+          Let us design an Identity for your business using awesome and unique
+          combinations of color, graphics and typography in order to design
+          elements that we can use across all media types.
+          <br /><br />
+          Media types include websites, marketing assets, social media profiles that
+          will serve as an advocate for your brand.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  //   .container {
+  //     max-width: 1280px;
+  //     margin: 2rem auto;
+  //     display: grid;
+  //     grid-template-columns: 1fr;
+  //     gap: 4rem;
+
+  //     .title {
+  //       font-size: 4rem;
+  //     }
+  //   }
+
+  //   @media screen and (min-width: 600px) {
+  //     .container {
+  //       max-width: 1280px;
+  //       margin: 2rem auto;
+  //       grid-template-columns: 3fr 9fr;
+  //       gap: 4rem;
+  //     }
+
+  //     .content {
+  //       display: grid;
+  //       //   justify-content: space-evenly;
+  //       grid-template-rows: auto 1fr;
+
+  //       p {
+  //         display: flex;
+  //         align-items: center;
+  //       }
+  //     }
+  //   }
+
+  .intro_container {
+    display: grid;
+    column-gap: 13.2rem;
+    grid-template-columns: 1fr;
+
+    .identity_design_image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .title {
+      margin-top: 10rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 28.8px;
+    }
+  }
+
+  @media screen and (min-width: 1011px) {
+    .intro_container {
+      max-width: 1440px;
+      margin: 2rem auto;
+      display: grid;
+      column-gap: 13.2rem;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas:
+        "image title"
+        "image paragraph";
+
+      .identity_design_image {
+        grid-area: image;
+        grid-column: 1/4;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      p {
+        grid-area: paragraph;
+        grid-column: 4/12;
+        grid-row: 1;
+        margin-top: calc(3.2rem + 3.6rem);
+      }
+
+      .title {
+        grid-area: title;
+        grid-column: 4/12;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .definition_container {
+    max-width: 954px;
+    margin: 172px auto;
+
+    .title {
+      font-size: 3.2rem;
+      font-weight: 400;
+      margin-bottom: 19.2px;
+    }
+
+    .text {
+      font-size: 1.8rem;
+      line-height: 28.8px;
+      font-weight: 400;
+    }
+  }
+
+  .services_container {
+    display: grid;
+    gap: 10rem;
+    .Card_heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .Card_title {
+        font-size: 1.8rem;
+        line-height: 28.8px;
+        font-weight: 400;
+      }
+
+      .Card_icon {
+        margin-right: 1rem;
+        img {
+          width: 24px;
+          fill: white;
+          color: white;
+        }
+      }
+    }
+    .Card_text {
+      font-size: 1.8rem;
+      line-height: 28.8px;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .services_container {
+      max-width: 1214px;
+      margin: 172px auto;
+      gap: 72px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,232 @@
+---
+import image from "../../images/identity_design_image.svg";
+import logoIcon from "../../images/logo_icon.svg";
+import marketingIcon from "../../images/marketing_icon.svg";
+import personalBrandingIcon from "../../images/personal_branding_icon.svg";
+import corporateBrandingIcon from "../../images/corporate_branding_icon.svg";
+---
+
+<section id="identity" class="identity">
+  <div class="container intro_container">
+    <div class="icon identity_design_image">
+      <img src={image} alt="" />
+    </div>
+
+    <h4 class="title identity_design_title">web design</h4>
+
+    <p>
+      Our web design services can help rediscover your business’s image in the
+      Internet marketplace. Whether it’s to increase profits, provide support,
+      sell products or promote your brand, allow our web design services to
+      bring your company front and center. Established in 2007 on Long Island
+      and with offices in New York City, our web design services have a proven
+      track record of what it takes to have a successful website.
+    </p>
+  </div>
+
+  <div class="container definition_container">
+    <div class="title">Discovery</div>
+    <div class="text">
+      We start our projects by understanding the scope and requirements. This is
+      accomplished by working closely with you to make sure we are all on the
+      same page.
+    </div>
+  </div>
+
+  <div class="container services_container">
+    <div class="Card logo_card">
+      <div class="Card_heading">
+        <div class="Card_icon">
+          <img src={logoIcon} alt="" />
+        </div>
+        <div class="Card_title">
+          <h4>UI-Design</h4>
+        </div>
+      </div>
+      <div class="Card_text">
+        <p>
+          The “UI” in UI design stands for “user interface.” The user interface
+          is the graphical layout of an application. It consists of the buttons
+          users click on, the text they read, the images, sliders, text entry
+          fields, and all the rest of the items the user interacts with. This
+          includes screen layout, transitions, interface animations and every
+          single micro-interaction. Any sort of visual element, interaction, or
+          animation must all be designed.
+        </p>
+      </div>
+    </div>
+
+    <div class="Card marketing_card">
+      <div class="Card_heading">
+        <div class="Card_icon">
+          <img src={marketingIcon} alt="" />
+        </div>
+        <div class="Card_title">
+          <h4>digital solutions</h4>
+        </div>
+      </div>
+      <div class="Card_text">
+        <p>
+          We create your online identity to perfectly reflect your company and
+          the message you want to get through to your visitors. We give you the
+          tools to be more effective online.
+          <br /><br />
+          Your digital identity includes not only your web-app, website, but also
+          your social media assets, written content and audio-visual content.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  //   .container {
+  //     max-width: 1280px;
+  //     margin: 2rem auto;
+  //     display: grid;
+  //     grid-template-columns: 1fr;
+  //     gap: 4rem;
+
+  //     .title {
+  //       font-size: 4rem;
+  //     }
+  //   }
+
+  //   @media screen and (min-width: 600px) {
+  //     .container {
+  //       max-width: 1280px;
+  //       margin: 2rem auto;
+  //       grid-template-columns: 3fr 9fr;
+  //       gap: 4rem;
+  //     }
+
+  //     .content {
+  //       display: grid;
+  //       //   justify-content: space-evenly;
+  //       grid-template-rows: auto 1fr;
+
+  //       p {
+  //         display: flex;
+  //         align-items: center;
+  //       }
+  //     }
+  //   }
+
+  .intro_container {
+    display: grid;
+    column-gap: 13.2rem;
+    grid-template-columns: 1fr;
+
+    .identity_design_image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .title {
+      margin-top: 10rem;
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 28.8px;
+    }
+  }
+
+  @media screen and (min-width: 1011px) {
+    .intro_container {
+      max-width: 1440px;
+      margin: 2rem auto;
+      display: grid;
+      column-gap: 13.2rem;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas:
+        "image title"
+        "image paragraph";
+
+      .identity_design_image {
+        grid-area: image;
+        grid-column: 1/4;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      p {
+        grid-area: paragraph;
+        grid-column: 4/12;
+        grid-row: 1;
+        margin-top: calc(3.2rem + 3.6rem);
+      }
+
+      .title {
+        grid-area: title;
+        grid-column: 4/12;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .definition_container {
+    max-width: 954px;
+    margin: 172px auto;
+
+    .title {
+      font-size: 3.2rem;
+      font-weight: 400;
+      margin-bottom: 19.2px;
+    }
+
+    .text {
+      font-size: 1.8rem;
+      line-height: 28.8px;
+      font-weight: 400;
+    }
+  }
+
+  .services_container {
+    display: grid;
+    gap: 10rem;
+    .Card_heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .Card_title {
+        font-size: 1.8rem;
+        line-height: 28.8px;
+        font-weight: 400;
+      }
+
+      .Card_icon {
+        margin-right: 1rem;
+        img {
+          width: 24px;
+          fill: white;
+          color: white;
+        }
+      }
+    }
+    .Card_text {
+      font-size: 1.8rem;
+      line-height: 28.8px;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .services_container {
+      max-width: 1214px;
+      margin: 172px auto;
+      gap: 72px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
