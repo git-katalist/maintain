@@ -9,4 +9,5 @@ export default defineConfig({
   },
   site: "https://git-katalist.github.io/",
   base: "/maintain",
+  // base: "/manifest",
 });

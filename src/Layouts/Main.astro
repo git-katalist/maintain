@@ -1,4 +1,6 @@
 ---
+import Navigation from "../components/Navigation.astro";
+
 const { title, page_name } = Astro.props;
 ---
 
@@ -11,6 +13,7 @@ const { title, page_name } = Astro.props;
     <title>{title}</title>
   </head>
   <body class={page_name}>
+    <Navigation />
     <slot />
   </body>
 </html>

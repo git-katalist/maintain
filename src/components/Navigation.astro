@@ -1,0 +1,141 @@
+---
+---
+
+<header>
+  <nav>
+    <a class="logo" href="/manifest/">Katalist</a>
+    <a href="#" class="open-menu">OPEN</a>
+    <a href="#" class="close-menu">CLOSE</a>
+    <ul class="menu">
+      <li><a href="/manifest/">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Identity</a></li>
+      <li><a href="#">Web Design</a></li>
+      <li><a href="#">Web Development</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style lang="scss">
+  $height: 50px;
+  header {
+    width: 100%;
+    height: $height;
+    position: fixed;
+    z-index: 10;
+
+    nav {
+      width: 100%;
+      height: $height;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      background-color: black;
+    }
+
+    ul {
+      position: absolute;
+      top: $height;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      width: 320px;
+      background-color: teal;
+      list-style-type: none;
+      transform: translateX(100%);
+      transition: 0.5s;
+
+      li {
+        height: 3rem;
+        // & {
+        //   border-bottom: 1px solid red;
+        // }
+
+        a {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          text-decoration: none;
+          color: whitesmoke;
+          padding-left: 1rem;
+          font-size: 1.6rem;
+          border-bottom: 1px solid red;
+
+          &:hover {
+            background-color: green;
+          }
+        }
+      }
+    }
+
+    ul.active {
+      transform: translateX(0);
+    }
+  }
+
+  .close-menu {
+    display: none;
+    transition: 0.5s;
+  }
+
+  @media (min-width: 768px) {
+    header {
+      .open-menu,
+      .close-menu {
+        display: none;
+      }
+
+      nav {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+        background-color: transparent;
+      }
+
+      ul {
+        position: relative;
+        top: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        background-color: transparent;
+        transform: translateX(0);
+
+        li {
+          height: $height;
+          a {
+            text-decoration: none;
+            color: whitesmoke;
+            display: flex;
+            height: 100%;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            align-items: center;
+            border: 0;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<script src="../../scripts/navigation.js"></script>
+
+<!-- <script>
+  const menuToggle = document.querySelector(".toggler");
+  const slideMenu = document.querySelector(".menu");
+
+  menuToggle.addEventListener("click", toggleMenu);
+
+  function toggleMenu() {
+    slideMenu.classList.add("active");
+  }
+</script> -->
